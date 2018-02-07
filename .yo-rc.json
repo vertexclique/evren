@@ -1,0 +1,10 @@
+{
+  "generator-python-lib": {
+    "projectName": "evren",
+    "fullName": "Mahmut Bulut",
+    "email": "vertexclique@gmail.com",
+    "gitlabName": "vertexclique",
+    "ciProvider": "Travis CI",
+    "version": "4.0.33"
+  }
+}
