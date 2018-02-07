@@ -7,15 +7,15 @@ import unittest
 import subprocess
 
 from coremltools.models import model
-from evren.coreml.keras import *
+from evren.ios.keras import *
 
 from keras.models import Sequential
 from keras.layers.core import Dense
 
 
-class TestCoreMLKeras(unittest.TestCase):
+class TestIOSKeras(unittest.TestCase):
     """
-    Test evren's CoreML Keras Exporter.
+    Test evren's IOS Keras Exporter.
     """
 
     def setUp(self):

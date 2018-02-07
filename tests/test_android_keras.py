@@ -4,8 +4,6 @@ evren tests.
 
 
 import unittest
-import subprocess
-import importlib
 
 from evren.android.keras import *
 
