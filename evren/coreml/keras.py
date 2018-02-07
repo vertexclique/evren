@@ -12,6 +12,7 @@ def __custom_layer_loader(model, custom_objects):
 
 
 def export_keras(model, custom_layer_objects=None, model_precision=FULL_PRECISION):
+    mlmodel = None
     try:
         mlmodel = coremltools.converters.keras.convert(
             model=model,

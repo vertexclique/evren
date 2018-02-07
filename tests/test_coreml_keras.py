@@ -1,12 +1,19 @@
+"""
+evren tests.
+"""
+
 
 import unittest
-import coremltools.models.model as MLModel
+import subprocess
+
+from coremltools.models import model
 from evren.coreml.keras import *
 
 from keras.models import Sequential
 from keras.layers.core import Dense
 
-class TestCoreML(unittest.TestCase):
+
+class TestCoreMLKeras(unittest.TestCase):
     """
     Test evren's CoreML Keras Exporter.
     """
@@ -22,7 +29,15 @@ class TestCoreML(unittest.TestCase):
 
     def test_export_keras(self):
         mlmodel = export_keras(self.model)
+
         self.assertEqual(
-            isinstance(mlmodel, MLModel),
+            isinstance(mlmodel, model.MLModel),
             True
         )
+
+    def test_export_keras_to_file(self):
+        filename = 'test.mlmodel'
+        export_keras_to_file(self.model, filename)
+
+        result = subprocess.run(['file', filename], stdout=subprocess.PIPE)
+        self.assertIn('PDP-11 pure executable', result.stdout.decode('utf-8'))

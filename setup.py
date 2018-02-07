@@ -52,7 +52,7 @@ setup(
     install_requires=[
         'coremltools >= 0.8',
         'Keras >= 2.1.3',
-        'tensorflow >= 1.5.0'
+        'tensorflow >= 1.3.0'
     ],
     license='Apache License (2.0)',
     name='evren',
