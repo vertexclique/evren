@@ -6,7 +6,6 @@ env:
   - TOXENV=py35
   - TOXENV=py36
   - TOXENV=pypy
-  - TOXENV=lint
 install:
   - pip install -r requirements-dev.txt
 matrix:
